@@ -1,20 +1,15 @@
 {
-  "name": "<PACKAGE>",
+  "name": "ai-effects",
   "version": "1.0.0",
-  "description": "<DESCRIPTION>",
-  "packageManager": "pnpm@9.0.0",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "description": "",
+  "packageManager": "pnpm@10.0.0",
   "type": "module",
   "files": [
     "dist"
   ],
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
   },
   "scripts": {
     "prepublishOnly": "pnpm build",
@@ -24,11 +19,11 @@
     "prepare": "husky"
   },
   "keywords": [],
-  "author": "<AUTHOR>",
-  "license": "<LICENSE>",
+  "author": "Chris Cook",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/<USERNAME>/<REPO>"
+    "url": "git+https://github.com/zirkelc/ai-effects.git"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
@@ -42,5 +37,7 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
-  }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js"
 }
